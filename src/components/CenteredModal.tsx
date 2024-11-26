@@ -63,9 +63,8 @@ const ResetPasswordModal = () => {
       {/* Modal */}
       <Modal
         transparent={true}
-        animationType="fade"
+        animationType="slide"
         visible={modalVisible}
-        presentationStyle="pageSheet"
         onRequestClose={() => {
           reset();
           setModalVisible(false);
@@ -87,12 +86,14 @@ const ResetPasswordModal = () => {
                 name="currentPassword"
                 placeholder="Current Password"
                 defaultValue=""
+                type="password"
               />
               <InputController
                 control={control}
                 name="newPassword"
                 placeholder="New Password"
                 defaultValue=""
+                // type="password"
               />
 
               <InputController
@@ -100,6 +101,7 @@ const ResetPasswordModal = () => {
                 name="confirmPassword"
                 placeholder="Confirm New Password"
                 defaultValue=""
+                type="password"
               />
 
               <TouchableOpacity
@@ -137,7 +139,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dim background
+    // backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dim background
     justifyContent: "flex-end",
   },
   modalView: {
