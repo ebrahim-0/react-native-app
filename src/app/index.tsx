@@ -4,8 +4,15 @@ import CenteredModal from "@/components/CenteredModal";
 
 const index = () => {
   const [statusBarHidden, setStatusBarHidden] = useState(false);
+
   return (
-    <View style={{ flex: 1, backgroundColor: "plum", padding: 20 }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "plum",
+        padding: 20,
+      }}
+    >
       <StatusBar
         backgroundColor="plum"
         barStyle="dark-content"

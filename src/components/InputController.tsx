@@ -41,6 +41,7 @@ const InputController = ({
                   onBlur={onBlur}
                   onChangeText={onChange}
                   secureTextEntry={type === "password" && !showPassword}
+                  style={style.input}
                   value={value}
                   {...otherProps}
                   {...others}
@@ -50,6 +51,7 @@ const InputController = ({
                     name={showPassword ? "eye-off" : "eye"}
                     size={24}
                     color="#aaa"
+                    style={{ paddingHorizontal: 8 }}
                     onPress={toggleShowPassword}
                   />
                 )}
@@ -77,6 +79,7 @@ export default InputController;
 
 const style = StyleSheet.create({
   container: {
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -84,13 +87,10 @@ const style = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     borderRadius: 10,
-    paddingHorizontal: 15,
   },
   input: {
     flex: 1,
     color: "#333",
-    paddingVertical: 10,
-    paddingRight: 10,
-    fontSize: 16,
+    paddingHorizontal: 15,
   },
 });
